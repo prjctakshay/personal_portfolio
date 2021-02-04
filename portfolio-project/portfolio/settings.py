@@ -59,8 +59,9 @@ TEMPLATES = [
             #Django tried loading these templates, in this order:top to bottom
             # os.path.join(BASE_DIR,'baemplate'),
             os.path.join(BASE_DIR,'base_template'),
+            # os.path.join(BASE_DIR,'core/templates'),
         ],
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -126,8 +127,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'base_template'),
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'base_template'),
     # os.path.join(BASE_DIR,'templatesq')
 ]
 # STATIC_ROOT = os.path.join(BASE_DIR,  'stadtic')
