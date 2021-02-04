@@ -1,12 +1,11 @@
-
-{% extends 'base.html'%} <!--must 1st tag and syntax same otherwise error-->
+{% extends 'base.html'%}
+<!--must 1st tag and syntax same otherwise error-->
 {% load static %}
 
-    <title> {{ title }} </title>
+<title> {{ title }} </title>
 
 
-    {% block content %}
-        <h1>hello world {{title}}</h1>
+{% block content %}
+<h1>hello world {{title}}</h1>
 <a href=" {% url 'test'%}">head</a>
-    {% endblock %}
-
+{% endblock %}

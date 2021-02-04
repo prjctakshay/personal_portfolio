@@ -56,9 +56,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            #Django tried loading these templates, in this order:top to bottom
+            # Django tried loading these templates, in this order:top to bottom
             # os.path.join(BASE_DIR,'baemplate'),
-            os.path.join(BASE_DIR,'base_template'),
+            os.path.join(BASE_DIR, 'base_template'),
             # os.path.join(BASE_DIR,'core/templates'),
         ],
         'APP_DIRS': True,
@@ -127,7 +127,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'base_template'),
-    # os.path.join(BASE_DIR,'templatesq')
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'base_template'),
+                    # os.path.join(BASE_DIR,'templatesq')
+                    ]
 # STATIC_ROOT = os.path.join(BASE_DIR,  'stadtic')
