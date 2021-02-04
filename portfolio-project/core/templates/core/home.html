@@ -5,8 +5,9 @@
     <title> {{ title }} </title>
 
 
-    {% block c %}
+    {% block content %}
         <h1>hello world {{title}}</h1>
-<a href="{  % static 'head.html' %}">head</a>
+<a href="{% static 'del.html' %}">head</a>
+<a href=" {% url 'tfest'%}">head</a>
     {% endblock %}
 
