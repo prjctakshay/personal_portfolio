@@ -72,11 +72,43 @@
   run and make your own changes
  
  
+ -------------------------------------
+ creating app
+ DTL(django template alnguage)
+ create dir base_template
+     inside create base.html
+ add template path inside settings.py
+ inside TEMPLATES list >dictonary 'DIRS' : '=>>'
+      path(os.path.join(BASE_DIR,'base_template')
+ #Django tried loading these templates, in this order:top to bottom
  
+ in views import >>
+  from django.shortcuts import render
+
+  def home_test(request):
+    # return HttpResponse("<h1>hello</h1>")
+    return render(request, './base.html')
  
+  we can also pass some values to that web page 
+    return render(request, './base.html', {'title':'sample web page'})
+    then add following line to base.html
+        <title> {{ title }} </title>
+
+
+  #base and extend template
+  create base.html
+  {% block name %}
+  
+   {% endblock %} 
+   
+   inside which html we want extend this add>>
+   
+{% extends 'head.html'%} <!--must 1st tag and syntax same otherwise error-->
+ then
  
- 
- 
+    {% block name %}
+        <h1>hello world {{title}}</h1>
+    {% endblock %}
  
  
  
