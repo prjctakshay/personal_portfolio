@@ -128,6 +128,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'base_template'),
-                    # os.path.join(BASE_DIR,'templatesq')
+#                     # os.path.join(BASE_DIR,'templatesq')
                     ]
 # STATIC_ROOT = os.path.join(BASE_DIR,  'stadtic')
+
+
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
+#above create a dir media the img files are save under the media dir
