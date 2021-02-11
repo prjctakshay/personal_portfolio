@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def home_test(request):
+def home(request):
     # return HttpResponse("<h1>hello</h1>")
     return render(request, 'core/index.html', {'title': 'sample web page'})
 

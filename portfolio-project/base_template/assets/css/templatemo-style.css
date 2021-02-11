@@ -441,9 +441,9 @@ button:hover {
     transition: all 0.5s;
 }
 
-.service-item .first-service-icon {
+/* .service-item .first-service-icon {
     background-image: url(../images/first-white-icon.png);
-}
+} */
 
 .service-item:hover .first-service-icon {
     background-image: url(../images/first-main-icon.png);

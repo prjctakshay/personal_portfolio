@@ -49,42 +49,20 @@
       </div>
     </div>
   </div>
+
   <!-- About me -->
   <section class="section about-me" data-section="section1">
     <div class="container">
       <div class="section-heading">
-        <h2>About Me</h2>
+        <h2>– Hey there! I'm Akshay, a full-stack engineer.</h2>
         <div class="line-dec"></div>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt dolor vero molestiae vel
-          excepturi rerum, adipisci
-          amet facere, illo animi enim sapiente architecto voluptatem, recusandae earum esse quasi nobis.</span>
+        <span>Nostrud consequat irure irure ullamco. Voluptate dolore do aliquip laborum nulla cillum exercitation eu.
+          Cillum cupidatat tempor Lorem eiusmod sint ipsum aliquip amet ex velit do enim culpa. Deserunt mollit qui ut
+          elit voluptate commodo amet. Est nostrud nisi excepteur cillum non ad laborum ut aliquip sit veniam ad.
+
+          Enim fugiat qui elit Lorem. Eiusmod cillum magna voluptate aliqua et ipsum eiusmod. Aliquip dolor amet ad est
+          incididunt labore ea. Commodo pariatur culpa duis nisi do consectetur.</span>
       </div>
-      <!-- left image -->
-      <!-- <div class="left-image-post">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="left-image">
-              <img src="{% static 'assets/images/left-image.jpg' %}" alt="" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="right-text">
-              <h4>Reflux HTML CSS Template</h4>
-              <p>
-                Donec tristique feugiat lacus, at sollicitudin nunc euismod
-                sed. Mauris viverra, erat non sagittis gravida, elit dui
-                mollis ante, sit amet eleifend purus ligula eget eros. Sed
-                tincidunt quam vitae neque pharetra dignissim eget ut
-                libero.
-              </p>
-              <div class="white-button">
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- right image -->
       <div class="right-image-post">
         <div class="row">
           <div class="col-md-6">
@@ -112,6 +90,7 @@
     </div>
   </section>
 
+  <!-- What I’m good at? -->
   <section class="section my-services" data-section="section2">
     <div class="container">
       <div class="section-heading">
@@ -121,49 +100,17 @@
           Vestibulum congue leo et tellus aliquam, eu viverra nulla semper.
           Nullam eu faucibus diam. Donec eget massa ante.</span>
       </div>
-      
+
       <div class="row">
+        <!-- for loop expected here -->
         <div class="col-md-6">
           <div class="service-item">
-            <div class="{% static 'first-service-icon service-icon' %}"></div>
-            <h4>HTML5 &amp; CSS3</h4>
-            <p>
-              Phasellus non convallis dolor. Integer tempor hendrerit arcu
-              at bibendum. Sed ac ante non metus vehicula congue quis eget
-              eros.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="service-item">
-            <div class="second-service-icon service-icon"></div>
+            <img src="{% static 'assets/images/second-main-icon.png' %}" class="service-icon" alt="">
             <h4>Creative Ideas</h4>
             <p>
               Proin lacus massa, eleifend sed fermentum in, dignissim vel
               metus. Nunc accumsan leo nec felis porttitor, ultricies
               faucibus purus mollis.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="service-item">
-            <div class="third-service-icon service-icon"></div>
-            <h4>Easy Customize</h4>
-            <p>
-              Integer suscipit condimentum aliquet. Nam quis risus metus.
-              Nullam faucibus quam eget arcu pretium tincidunt. Nam libero
-              dui.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="service-item">
-            <div class="fourth-service-icon service-icon"></div>
-            <h4>Admin Dashboard</h4>
-            <p>
-              Vivamus et dui a massa venenatis fringilla. Proin lacus massa,
-              eleifend sed fermentum in, dignissim vel metus. Nunc accumsan
-              leo nec felis porttitor.
             </p>
           </div>
         </div>
@@ -181,19 +128,9 @@
           mauris.</span>
       </div>
       <div class="row">
-        <div class="isotope-wrapper">
-          <!-- <form class="isotope-toolbar">
-            <label><input type="radio" data-type="*" checked="" name="isotope-filter" />
-              <span>all</span></label>
-            <label><input type="radio" data-type="people" name="isotope-filter" />
-              <span>people</span></label>
-            <label><input type="radio" data-type="nature" name="isotope-filter" />
-              <span>nature</span></label>
-            <label><input type="radio" data-type="animals" name="isotope-filter" />
-              <span>animals</span></label>
-          </form> -->
+        <div class="isotope-wrapper">>
           <div class="isotope-box">
-            <div class="isotope-item" data-type="nature">
+            <!-- <div class="isotope-item" data-type="nature">
               <figure class="snip1321">
                 <img src="{% static 'assets/images/portfolio-01.jpg' %}" alt="sq-sample26" />
                 <figcaption>
@@ -203,9 +140,9 @@
                   <span>free to use our template</span>
                 </figcaption>
               </figure>
-            </div>
+            </div> -->
 
-            <div class="isotope-item" data-type="people">
+            <!-- <div class="isotope-item" data-type="people">
               <figure class="snip1321">
                 <img src="{% static 'assets/images/portfolio-02.jpg' %}" alt="sq-sample26" />
                 <figcaption>
@@ -215,8 +152,8 @@
                   <span>please tell your friends</span>
                 </figcaption>
               </figure>
-            </div>
-
+            </div> -->
+            <!-- 
             <div class="isotope-item" data-type="animals">
               <figure class="snip1321">
                 <img src="{% static 'assets/images/portfolio-03.jpg' %}" alt="sq-sample26" />
@@ -227,9 +164,9 @@
                   <span>customize anything</span>
                 </figcaption>
               </figure>
-            </div>
+            </div> -->
 
-            <div class="isotope-item" data-type="people">
+            <!-- <div class="isotope-item" data-type="people">
               <figure class="snip1321">
                 <img src="{% static 'assets/images/portfolio-04.jpg' %}" alt="sq-sample26" />
                 <figcaption>
@@ -239,9 +176,9 @@
                   <span>Re-distribution not allowed</span>
                 </figcaption>
               </figure>
-            </div>
+            </div> -->
 
-            <div class="isotope-item" data-type="nature">
+            <!-- <div class="isotope-item" data-type="nature">
               <figure class="snip1321">
                 <img src="{% static 'assets/images/portfolio-05.jpg' %}" alt="sq-sample26" />
                 <figcaption>
@@ -251,7 +188,7 @@
                   <span>Ut sollicitudin risus</span>
                 </figcaption>
               </figure>
-            </div>
+            </div> -->
 
             <div class="isotope-item" data-type="animals">
               <figure class="snip1321">

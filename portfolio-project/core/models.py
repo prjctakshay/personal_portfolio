@@ -8,7 +8,7 @@ class AboutMe(models.Model):
     
 class Skills(models.Model):
     skills_text = models.CharField(max_length = 500)
-    # skill_img = models.ImageField()
+    skill_img = models.ImageField(upload_to = 'yes',null=True)
 
 # its represent What I’m good at? in index page
 class SkillMore(models.Model):

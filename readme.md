@@ -74,7 +74,7 @@
  
  -------------------------------------
  creating app
- DTL(django template alnguage)
+ DTL(django template language)
  create dir base_template
      inside create base.html
  add template path inside settings.py
@@ -109,6 +109,8 @@
     {% block name %}
         <h1>hello world {{title}}</h1>
     {% endblock %}
+    
+   
  
  
  
