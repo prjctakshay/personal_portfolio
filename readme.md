@@ -110,6 +110,34 @@
         <h1>hello world {{title}}</h1>
     {% endblock %}
     
+------------------
+MEDIA_URL = '/media/' 
+^is urlil display cheyyunnath aan
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
+^is directory name aan evida aan img save cheyandat aa diectory
+in above case images are saved ./media dir
+and images are upload in this path and which path 
+specified upload_to in models
+eg =    skill_img = models.ImageField(upload_to = 'portfolio_images',null=True)
+above case img upload to below eg
+./media/portfolio_images
+
+in defaul img are saved to portfolio_images enna folderil if it doesnt exist create in base_dir and
+img upload to that dir
+#above create a dir media the img files are save under the media dir
+
+img upload are work above code but not show if we click in the img dir
+
+so add following code to urls.py
+from django.conf.urls.static import static
+from django.conf import settings
+..........
+...........
+urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+
+    
    
  
  
