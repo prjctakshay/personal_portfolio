@@ -4,8 +4,9 @@
 *.pyc
 __pycache__
 db.sqlite3
-media
-
+/media
+/.idea
+/base_template/assets/images
 # Visual Studio Code # 
 .vscode/* 
 !.vscode/settings.json 
