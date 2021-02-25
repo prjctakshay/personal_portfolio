@@ -1,3 +1,38 @@
-body{
-color:yellow;
+img.works  {
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 53px 24px 24px 24px;
+    -webkit-border-radius: 53px 24px 24px 24px;
+    -moz-border-radius: 53px 24px 24px 24px;
+}
+
+img.works:hover {
+    opacity: 1;
+    /* border: 2px solid  salmon; */
+    /* transform: rotate(4deg) ; */
+    transform: skew(-1deg);
+    transition-duration: 3sms;
+    /* transform: matrix3d(20deg); */
+    /* border: 2px solid seashell; */
+}
+.expand {
+    position: relative;
+    display: none;
+}
+
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    cursor: pointer;
 }

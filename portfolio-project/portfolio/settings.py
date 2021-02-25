@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@^#0%p5+!%yc%k+r_kcq2dgx18#0_nuyeo84v29j&i6^n_%2zc'
+SECRET_KEY = '@^#0%p5+!ssdffedtyc%k+r_kcq2dgdx18#f0_nuyeo84v29j&i6^n_%2zc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },
@@ -133,6 +134,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'base_template'),
 # STATIC_ROOT = os.path.join(BASE_DIR,  'stadtic')
 
 
-MEDIA_URL = '/media/' 
+MEDIA_URL = '/media/'  #it is just a name display in address bar url
 MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
 #above create a dir media the img files are save under the media dir

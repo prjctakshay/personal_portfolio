@@ -1,11 +1,15 @@
-{% extends 'base.html'%}
+
 <!--must 1st tag and syntax same otherwise error-->
-{% load static %}
 
 <title> {{ title }} </title>
 
 
 {% block content %}
-<h1>hello world {{title}}</h1>
+{% comment %} {% for a in obj %} {% endcomment %}
+
+<h1>hello world {{data.about_me.values.user_name }}</h1>
+
+{% comment %} {% endfor %} {% endcomment %}
+
 <a href=" {% url 'test'%}">head</a>
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'portfolio_base.html'%}
 {% load static %}
-
 {% block content %}
+
 <div id="page-wraper">
   <!-- Sidebar Menu -->
   <div class="responsive-nav">
@@ -10,11 +10,11 @@
       <i class="fa fa-times" id="menu-close"></i>
       <div class="container">
         <div class="image">
-          <a href="#"><img src="{% static 'assets/images/author-image.jpg' %}" alt="" /></a>
+          <a href="#"><img src="{{ data.about_me.user_profile_pic.url }}" alt="" /></a>
         </div>
         <div class="author-content">
-          <h4>Akshay P K</h4>
-          <span>Full Stack Developer</span>
+          <h4>{{ data.about_me.user_name }}</h4>
+          <span> {{ data.about_me.user_profession }}</span>
         </div>
         <nav class="main-nav" role="navigation">
           <ul class="main-menu">
@@ -49,215 +49,165 @@
       </div>
     </div>
   </div>
+  <!-- side bar end -->
+  <section class="except_sidebar">
 
-  <!-- About me -->
-  <section class="section about-me" data-section="section1">
-    <div class="container">
-      <div class="section-heading">
-        <h2>– Hey there! I'm Akshay, a full-stack engineer.</h2>
-        <div class="line-dec"></div>
-        <span>Nostrud consequat irure irure ullamco. Voluptate dolore do aliquip laborum nulla cillum exercitation eu.
-          Cillum cupidatat tempor Lorem eiusmod sint ipsum aliquip amet ex velit do enim culpa. Deserunt mollit qui ut
-          elit voluptate commodo amet. Est nostrud nisi excepteur cillum non ad laborum ut aliquip sit veniam ad.
-
-          Enim fugiat qui elit Lorem. Eiusmod cillum magna voluptate aliqua et ipsum eiusmod. Aliquip dolor amet ad est
-          incididunt labore ea. Commodo pariatur culpa duis nisi do consectetur.</span>
+    <!-- About me -->
+    <section class="section about-me" data-section="section1">
+      <div class="container">
+        <div class="section-heading">
+          <h2>– Hey there! I'm {{ data.about_me.user_name}}, a {{ data.about_me.user_profession}}.</h2>
+          <div class="line-dec"></div>
+          <span>{{ data.about_me.about_me_bio }}</span>
+        </div>
       </div>
-      <div class="right-image-post">
+    </section>
+    <!-- About Me end -->
+
+    <!-- What I’m good at? -->
+    <section class="section my-services" data-section="section2">
+      <div class="container">
+        <div class="section-heading">
+          <h2>What I’m good at?</h2>
+          <div class="line-dec"></div>
+          <span>Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor.
+            Vestibulum congue leo et tellus aliquam, eu viverra nulla semper.
+            Nullam eu faucibus diam. Donec eget massa ante.</span>
+        </div>
         <div class="row">
+          {% for skill_m in data.skills_more %}
           <div class="col-md-6">
-            <div class="left-text">
-              <h4>Skills</h4>
-              <p>
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Vestibulum fermentum
-                eleifend nibh, vitae sodales elit finibus pretium.
-                Suspendisse potenti. Ut sollicitudin risus a sollicitudin
-                semper.
-              </p>
-              <!-- <div class="white-button">
-                <a href="#">Read More</a>
-              </div> -->
+            <div class="service-item">
+              <img src="{{ skill_m.skill_icon.url }}" class="service-icon " alt="" />
+              <h4>{{skill_m.skill_name}}</h4>
+              <p>{{skill_m.skill_discription}}</p>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="right-image">
-              <img src="{% static 'assets/images/right-image.jpg' %}" alt="" />
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- what iam good end -->
 
-  <!-- What I’m good at? -->
-  <section class="section my-services" data-section="section2">
-    <div class="container">
-      <div class="section-heading">
-        <h2>What I’m good at?</h2>
-        <div class="line-dec"></div>
-        <span>Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor.
-          Vestibulum congue leo et tellus aliquam, eu viverra nulla semper.
-          Nullam eu faucibus diam. Donec eget massa ante.</span>
-      </div>
-
-      <div class="row">
-        <!-- for loop expected here -->
-        <div class="col-md-6">
-          <div class="service-item">
-            <img src="{% static 'assets/images/second-main-icon.png' %}" class="service-icon" alt="">
-            <h4>Creative Ideas</h4>
-            <p>
-              Proin lacus massa, eleifend sed fermentum in, dignissim vel
-              metus. Nunc accumsan leo nec felis porttitor, ultricies
-              faucibus purus mollis.
-            </p>
-          </div>
+    <!-- my works -->
+    <section class="section my-work" data-section="section3">
+      <div class="container">
+        <div class="section-heading">
+          <h2>My Work</h2>
+          <div class="line-dec"></div>
+          <span>Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit
+            amet. Duis ac elit vulputate, lobortis arcu quis, vehicula
+            mauris.</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section my-work" data-section="section3">
-    <div class="container">
-      <div class="section-heading">
-        <h2>My Work</h2>
-        <div class="line-dec"></div>
-        <span>Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit
-          amet. Duis ac elit vulputate, lobortis arcu quis, vehicula
-          mauris.</span>
-      </div>
-      <div class="row">
-        <div class="isotope-wrapper">>
-          <div class="isotope-box">
-            <!-- <div class="isotope-item" data-type="nature">
-              <figure class="snip1321">
-                <img src="{% static 'assets/images/portfolio-01.jpg' %}" alt="sq-sample26" />
-                <figcaption>
-                  <a href="{% static 'assets/images/portfolio-01.jpg' %}" data-lightbox="image-1"
-                    data-title="Caption"><i class="fa fa-search"></i></a>
-                  <h4>First Title</h4>
-                  <span>free to use our template</span>
-                </figcaption>
-              </figure>
-            </div> -->
-
-            <!-- <div class="isotope-item" data-type="people">
-              <figure class="snip1321">
-                <img src="{% static 'assets/images/portfolio-02.jpg' %}" alt="sq-sample26" />
-                <figcaption>
-                  <a href="{% static 'assets/images/portfolio-02.jpg' %}" data-lightbox="image-1"
-                    data-title="Caption"><i class="fa fa-search"></i></a>
-                  <h4>Second Title</h4>
-                  <span>please tell your friends</span>
-                </figcaption>
-              </figure>
-            </div> -->
-            <!-- 
-            <div class="isotope-item" data-type="animals">
-              <figure class="snip1321">
-                <img src="{% static 'assets/images/portfolio-03.jpg' %}" alt="sq-sample26" />
-                <figcaption>
-                  <a href="{% static 'assets/images/portfolio-03.jpg' %}" data-lightbox="image-1"
-                    data-title="Caption"><i class="fa fa-search"></i></a>
-                  <h4>Item Third</h4>
-                  <span>customize anything</span>
-                </figcaption>
-              </figure>
-            </div> -->
-
-            <!-- <div class="isotope-item" data-type="people">
-              <figure class="snip1321">
-                <img src="{% static 'assets/images/portfolio-04.jpg' %}" alt="sq-sample26" />
-                <figcaption>
-                  <a href="{% static 'assets/images/portfolio-04.jpg' %}" data-lightbox="image-1"
-                    data-title="Caption"><i class="fa fa-search"></i></a>
-                  <h4>Item Fourth</h4>
-                  <span>Re-distribution not allowed</span>
-                </figcaption>
-              </figure>
-            </div> -->
-
-            <!-- <div class="isotope-item" data-type="nature">
-              <figure class="snip1321">
-                <img src="{% static 'assets/images/portfolio-05.jpg' %}" alt="sq-sample26" />
-                <figcaption>
-                  <a href="{% static 'assets/images/portfolio-05.jpg' %}" data-lightbox="image-1"
-                    data-title="Caption"><i class="fa fa-search"></i></a>
-                  <h4>Fifth Awesome</h4>
-                  <span>Ut sollicitudin risus</span>
-                </figcaption>
-              </figure>
-            </div> -->
-
-            <div class="isotope-item" data-type="animals">
-              <figure class="snip1321">
-                <img src="{% static 'assets/images/portfolio-06.jpg' %}" alt="sq-sample26" />
-                <figcaption>
-                  <a href="{% static 'assets/images/portfolio-06.jpg' %}" data-lightbox="image-1"
-                    data-title="Caption"><i class="fa fa-search"></i></a>
-                  <h4>Awesome Sixth</h4>
-                  <span>Donec eget massa ante</span>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section contact-me" data-section="section4">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Contact Me</h2>
-        <div class="line-dec"></div>
-        <span>Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
-          efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit.</span>
-      </div>
-      <div class="row">
-        <div class="right-content">
-          <div class="container">
-            <form id="contact" action="" method="post">
-              <div class="row">
-                <div class="col-md-6">
-                  <fieldset>
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..."
-                      required="" />
-                  </fieldset>
-                </div>
-                <div class="col-md-6">
-                  <fieldset>
-                    <input name="email" type="text" class="form-control" id="email" placeholder="Your email..."
-                      required="" />
-                  </fieldset>
-                </div>
-                <div class="col-md-12">
-                  <fieldset>
-                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..."
-                      required="" />
-                  </fieldset>
-                </div>
-                <div class="col-md-12">
-                  <fieldset>
-                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
-                      required=""></textarea>
-                  </fieldset>
-                </div>
-                <div class="col-md-12">
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="button">
-                      Send Message
-                    </button>
-                  </fieldset>
-                </div>
+        <!--    <div class="row">
+          <div class="isotope-wrapper ">
+            <div class="isotope-box">
+              <div class="isotope-item">
+                <figure class="snip1321">
+                  <img src="{% static 'assets/images/portfolio-06.jpg' %}" alt="sq-sample26" />
+                  <figcaption>
+                    <a href="{% static 'assets/images/portfolio-06.jpg' %}" data-lightbox="image-1"
+                      data-title="Caption"><i class="fa fa-search"></i></a>
+                    <h4>Awesome Sixth</h4>
+                    <span>Donec eget massa ante</span>
+                  </figcaption>
+                </figure>
               </div>
-            </form>
+            </div>
+          </div>
+  
+        </div>-->
+        <div class="row mt-5 skill-img text-center">
+          <div class="col-md-4 ">
+            <img class="works img-fluid" src="{% static 'assets/images/portfolio-02.jpg'%}" alt="Nature" style="width:100%"
+              onclick="myFunction(this);">
+            <h4>hello</h4>
+          </div>
+          <div class="col-md-4 img">
+            <img class="works img-fluid" src="{% static 'assets/images/portfolio-02.jpg'%}" alt="Snow" style="width:100%"
+              onclick="myFunction(this);">
+            <h4>hello</h4>
+          </div>
+          <div class="col-md-4 img">
+            <img class="works img-fluid" src="{% static 'assets/images/portfolio-02.jpg'%}" alt="Mountains" style="width:100%"
+              onclick="myFunction(this);">
+            <h4>hello</h4>
+          </div>
+          <div class="col-md-4 img">
+            <img class="works img-fluid" src="{% static 'assets/images/portfolio-02.jpg'%}" alt="Lights"
+              onclick="myFunction(this);">
+            <h4>hello</h4>
+          </div>
+        </div>
+        <!-- expanded image -->
+        <div class="expand">
+          <br>
+          <span onclick="this.parentElement.style.display='none'" class="closebtn ">&times;</span>
+          <img id="expandedImg" style="width:90%">
+          <div id="imgtext"></div>
+        </div>
+
+
+
+
+      </div>
+    </section>
+    <!-- my works end -->
+
+    <!-- contact me
+   -->
+    <section class="section contact-me" data-section="section4">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact Me</h2>
+          <div class="line-dec"></div>
+          <span>Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
+            efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit.</span>
+        </div>
+        <div class="row">
+          <div class="right-content">
+            <div class="container">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Your name..."
+                        required="" />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" placeholder="Your email..."
+                        required="" />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..."
+                        required="" />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
+                        required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">
+                        Send Message
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
 </div>
 
@@ -271,20 +221,24 @@
 <script src="{% static 'assets/js/lightbox.js' %}"></script>
 <script src="{% static 'assets/js/custom.js' %}"></script>
 <script>
-  //according to loftblog tut
+  //active aboutme
   $(".main-menu li:first").addClass("active");
+  // hide side bar when click outside the sidebar
+  $(".except_sidebar").click(function () {
+    $("#menu").removeClass("open");
+  });
+
+
 
   var showSection = function showSection(section, isAnimate) {
     var direction = section.replace(/#/, ""),
-      reqSection = $(".section").filter(
-        '[data-section="' + direction + '"]'
-      ),
+      reqSection = $(".section").filter('[data-section="' + direction + '"]'),
       reqSectionPos = reqSection.offset().top - 0;
 
     if (isAnimate) {
       $("body, html").animate(
         {
-          scrollTop: reqSectionPos
+          scrollTop: reqSectionPos,
         },
         800
       );

@@ -296,14 +296,14 @@ html {
     right: 10%;
     left: 35%;
     position: relative;
-    min-height: 100vh;
+    /* min-height: 90vh; */
     padding-bottom: 80px;
     border-bottom: 3px solid rgba(250, 250, 250, 0.25);
 }
 
 .section-heading {
     text-align: center;
-    padding: 80px 45px;
+    padding: 60px 5px;
 }
 
 .section-heading h2 {
@@ -436,6 +436,8 @@ button:hover {
     height: 70px;
     display: inline-block;
     margin-bottom: 30px;
+
+    
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 0.5s;
@@ -529,7 +531,7 @@ section.my-work .section-heading {
 
 .isotope-item {
     position: relative;
-    width: 48%;
+    /* width: 48%; */
     margin: 1%;
     border-bottom: 2px solid rgba(250,250,250,0.1);
     padding-bottom: 30px;
